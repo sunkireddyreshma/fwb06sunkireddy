@@ -4,4 +4,11 @@ block content
   p Sunkireddy Reshmareddy
   p assessment designed to feed into the learning process and work more pratical.
   <button type="button" class="btn btn-dark">Press Me</button>
-
+  div(id="target")Display
+  
+  script.
+    var client_count = 0
+    function update(){
+      client_count++;
+      document.getElementById("target").innerHTML = "Value now " +client_count;
+    }
