@@ -6,4 +6,9 @@ block content
   div(class="container-fluid mt-3")
   div(class="row")
     each horse,index in horses 
-        div(class="col-sm-2" ) #{horse.Name} - #{horse.Cost} - #{horse.Weight} 
+        div(class="col-sm-2" OnClick=`buy(${index})` ) #{horse.Name} - #{horse.Cost} - #{horse.Weight} 
+  script.
+      function buy(itemNo)
+      {
+        alert(`You purchased Item ${itemNo+1}`)
+      }     
